@@ -39,10 +39,10 @@ void setBackground(int translatedWidth, int translatedHeight){
 }
 
 void updateIncrement(){
-  if (increment >= 30){
+  if (increment >= 10){
     incrementDescend = true;
   }
-  if (increment <= 10){
+  if (increment <= -500){
     incrementDescend = false;
   }
   if (incrementDescend){
@@ -50,6 +50,7 @@ void updateIncrement(){
   } else {
     increment += 0.1;
   }
+  print("\nincrement ",increment, "\n");
 }
 
 PVector mapToHSB(int c, int end, int start, PVector hsb1, PVector hsb2){
